@@ -1,0 +1,9 @@
+<h1>{{ projects|length }} projects:</h1>
+
+{% for a, b in projects %}
+    <ul>
+        <li>{{ b }}</li>
+    </ul>
+{% endfor %}
+
+<p>The current projects are {{ [projects[0], projects[1], projects[2]]|join(', ', ' and ') }}.</p>

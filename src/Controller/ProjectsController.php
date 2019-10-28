@@ -12,9 +12,9 @@ class ProjectsController extends AbstractController
      */
     public function index()
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/ProjectsController.php',
+        $projects = ['Project 1','Project 2','Project 3'];
+        return $this->render('projects/index.html.twig', [
+            'projects'=>$projects
         ]);
     }
 }
